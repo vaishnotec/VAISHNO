@@ -166,8 +166,8 @@ header {
 }
 
 .logo {
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.8));
 }
@@ -1089,3 +1089,4 @@ header {
     margin-top: 0.7rem;
   }
 }
+
