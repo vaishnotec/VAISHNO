@@ -427,6 +427,7 @@ header {
 }
 
 /* Slider Section */
+/* Slider Section */
 .slider-section {
   padding: 3.5rem 0 2.5rem;
 }
@@ -438,6 +439,8 @@ header {
   margin-inline: auto;
   width: min(1180px, 100% - 3rem);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.85);
+  min-height: 260px; /* important: blank screen nahi aayega */
+  background: #020617;
 }
 
 .slide {
@@ -445,7 +448,7 @@ header {
   inset: 0;
   opacity: 0;
   transform: scale(1.04);
-  transition: opacity var(--transition-slow), transform var(--transition-slow);
+  transition: opacity 0.7s ease, transform 0.7s ease;
   will-change: opacity, transform;
 }
 
@@ -459,7 +462,6 @@ header {
   inset: 0;
   background-size: cover;
   background-position: center;
-  transform: scale(1.06);
 }
 
 .slide-bg-1 {
@@ -483,10 +485,10 @@ header {
 .slide-content {
   position: relative;
   padding: 3rem 2.5rem;
+  min-height: 260px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 260px;
 }
 
 .slide-content h3 {
@@ -516,12 +518,12 @@ header {
   background: rgba(148, 163, 184, 0.4);
   cursor: pointer;
   padding: 0;
-  transition: width var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+  transition: width 0.25s ease, background 0.25s ease, transform 0.25s ease;
 }
 
 .indicator.active {
   width: 26px;
-  background-image: var(--accent-gradient);
+  background: #f97316;
   transform: translateY(-1px);
 }
 
@@ -1089,4 +1091,5 @@ header {
     margin-top: 0.7rem;
   }
 }
+
 
