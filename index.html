@@ -540,10 +540,53 @@
     </a>
   </div>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+  <  <!-- FLOATING BUTTONS yaha tak rahenge ... -->
+
+  <!-- SLIDER INLINE SCRIPT -->
+  <script>
+    // Slider code – runs after HTML is loaded
+    const slides = document.querySelectorAll(".slider .slide");
+    const indicators = document.querySelectorAll(".slider .indicator");
+
+    console.log("Slides found:", slides.length, "Indicators:", indicators.length);
+
+    if (slides.length > 0) {
+      let current = 0;
+      let timer = null;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        indicators.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+        current = index;
+      }
+
+      function startSlider() {
+        clearInterval(timer);
+        timer = setInterval(() => {
+          const next = (current + 1) % slides.length;
+          showSlide(next);
+        }, 4000);
+      }
+
+      indicators.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showSlide(index);
+          startSlider();
+        });
+      });
+
+      // start
+      showSlide(0);
+      startSlider();
+    }
+  </script>
 </body>
 </html>
+
 
 
 
