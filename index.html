@@ -1,0 +1,537 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishno Tech | Professional IT Services & Networking Solutions</title>
+  <meta name="description" content="Vaishno Tech provides professional IT services including networking, computer repair, CCTV surveillance, cyber security and IT consultancy." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER / NAVBAR -->
+  <header id="top">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="#top" class="brand">
+          <!-- Replace src with your final logo path -->
+          <img src="assets/c__Users_pc_AppData_Roaming_Cursor_User_workspaceStorage_bf312caa37b2d6fe5dbc7a1deb7c815b_images_Picture1-9beab324-768d-4b4f-bc93-57b5ea91bd89.png" alt="Vaishno Tech Logo" class="logo" />
+          <span class="brand-name">Vaishno <span>Tech</span></span>
+        </a>
+      </div>
+
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Professional IT Services &amp;<br />
+          Networking Solutions
+        </h1>
+        <p class="hero-subtitle">
+          Reliable networking, computer repair, security systems and IT consultancy for businesses and homes.
+        </p>
+        <div class="hero-actions">
+          <a href="#services" class="btn btn-primary">Explore Services</a>
+          <a href="#contact" class="btn btn-outline">Talk to Expert</a>
+        </div>
+        <div class="hero-meta">
+          <div class="meta-item">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Secure &amp; Trusted</span>
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-headset"></i>
+            <span>Quick Support</span>
+          </div>
+          <div class="meta-item">
+            <i class="fa-solid fa-network-wired"></i>
+            <span>End‑to‑End Solutions</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-card">
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">500+</span>
+            <span class="stat-label">Devices Secured</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">99%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+        <div class="hero-card-main">
+          <i class="fa-solid fa-server hero-card-icon"></i>
+          <h3>Managed IT &amp; Networking</h3>
+          <p>
+            From structured cabling to enterprise‑grade Wi‑Fi, Vaishno Tech keeps your infrastructure always‑on.
+          </p>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> On‑site &amp; remote support</li>
+            <li><i class="fa-solid fa-check"></i> Proactive monitoring</li>
+            <li><i class="fa-solid fa-check"></i> Security‑first approach</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE SLIDER SECTION -->
+  <section class="slider-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Core IT Capabilities</h2>
+        <p>Future‑ready infrastructure, security and support for your business.</p>
+      </div>
+    </div>
+
+    <div class="slider" id="serviceSlider">
+      <div class="slide active" data-title="Networking Infrastructure">
+        <div class="slide-bg slide-bg-1"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h3>Networking Infrastructure</h3>
+          <p>
+            High‑performance LAN, WAN and wireless networks with professional design, installation and optimization.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Cyber Security">
+        <div class="slide-bg slide-bg-2"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h3>Cyber Security</h3>
+          <p>
+            Advanced firewalls, endpoint protection and 24/7 monitoring to keep your data and systems safe.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide" data-title="IT Technical Support">
+        <div class="slide-bg slide-bg-3"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h3>IT Technical Support</h3>
+          <p>
+            Friendly, experienced technicians ready to resolve your IT issues quickly on‑site or remotely.
+          </p>
+        </div>
+      </div>
+
+      <div class="slider-indicators" id="sliderIndicators">
+        <button class="indicator active" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2>IT Services for Every Need</h2>
+        <p>
+          Comprehensive IT support from structured cabling to advanced cyber security and end‑user repair.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- LAN Networking -->
+        <a href="lan-networking.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-network-wired"></i>
+          </div>
+          <h3>LAN Networking</h3>
+          <p>
+            Design and deployment of secure, high‑speed local networks for offices, homes and enterprises.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Data Recovery -->
+        <a href="data-recovery.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <h3>Data Recovery</h3>
+          <p>
+            Professional recovery of lost data from hard drives, SSDs and external media with maximum safety.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- IT Consultancy -->
+        <a href="it-consultancy.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-user-tie"></i>
+          </div>
+          <h3>IT Consultancy</h3>
+          <p>
+            Strategic technology consulting to align your IT infrastructure with your business goals.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- CCTV Surveillance -->
+        <a href="cctv-installation.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-video"></i>
+          </div>
+          <h3>CCTV Surveillance</h3>
+          <p>
+            Smart CCTV systems with remote viewing, recording and alerting to protect what matters most.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Biometric System -->
+        <a href="biometric-system.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-fingerprint"></i>
+          </div>
+          <h3>Biometric System</h3>
+          <p>
+            Advanced biometric attendance and access‑control solutions for secure workplaces.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- AMC Support -->
+        <a href="amc-support.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-handshake"></i>
+          </div>
+          <h3>AMC Support</h3>
+          <p>
+            Annual maintenance contracts for proactive, worry‑free management of your IT infrastructure.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Server & Wireless Setup -->
+        <a href="server-wireless-setup.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-server"></i>
+          </div>
+          <h3>Server &amp; Wireless Setup</h3>
+          <p>
+            Robust server deployment and seamless wireless configuration for reliable connectivity everywhere.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Software Installation -->
+        <a href="software-installation.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-download"></i>
+          </div>
+          <h3>Software Installation</h3>
+          <p>
+            Genuine software installation, configuration and licensing management for your devices.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Notebook Repair -->
+        <a href="notebook-repair.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-laptop"></i>
+          </div>
+          <h3>Notebook Repair</h3>
+          <p>
+            Fast and reliable laptop repair services for all major brands and issues.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- MAC Support -->
+        <a href="mac-support.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-brands fa-apple"></i>
+          </div>
+          <h3>MAC Support</h3>
+          <p>
+            Specialized diagnostics, upgrades and repair for Apple MacBook and iMac devices.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Linux Support -->
+        <a href="linux-support.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-brands fa-linux"></i>
+          </div>
+          <h3>Linux Support</h3>
+          <p>
+            Deployment, optimization and troubleshooting for Linux servers and workstations.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Hardware Repair -->
+        <a href="hardware-repair.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3>Hardware Repair</h3>
+          <p>
+            Component‑level hardware repair services that extend the life of your IT assets.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+
+        <!-- Desktop & Laptop Sales -->
+        <a href="desktop-laptop-sales.html" class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-computer"></i>
+          </div>
+          <h3>Desktop &amp; Laptop Sales</h3>
+          <p>
+            Customized desktops and laptops with expert guidance for business, gaming and home use.
+          </p>
+          <span class="service-link">Learn More <i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOOGLE REVIEW SECTION -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews-inner">
+        <div class="stars" aria-label="5 star rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="review-text">
+          "Trusted IT service provider with professional networking and repair solutions."
+        </p>
+        <a href="#" class="btn btn-light">View Google Reviews</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+    <div class="container about-layout">
+      <div class="about-image">
+        <div class="about-image-main"></div>
+        <div class="about-badge">
+          <i class="fa-solid fa-award"></i>
+          <div>
+            <span>Certified Experts</span>
+            <small>Vendor‑approved technicians</small>
+          </div>
+        </div>
+      </div>
+      <div class="about-content">
+        <h2>About Vaishno Tech</h2>
+        <p>
+          Vaishno Tech is a dedicated IT services company focused on delivering reliable and secure technology solutions for small
+          businesses, enterprises and home users. From wired and wireless networking to complete CCTV surveillance and endpoint
+          security, we architect, install and manage infrastructure that simply works.
+        </p>
+        <p>
+          Our certified engineers bring years of hands‑on experience in computer repair, data recovery, operating systems and
+          multi‑vendor hardware. We combine robust processes with human‑first support, ensuring your people stay productive and
+          your data stays protected.
+        </p>
+        <div class="about-list">
+          <div class="about-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>End‑to‑end IT consulting, deployment and support</span>
+          </div>
+          <div class="about-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>On‑site surveys, structured cabling and CCTV planning</span>
+          </div>
+          <div class="about-item">
+            <i class="fa-solid fa-circle-check"></i>
+            <span>Dedicated helpdesk, AMC and remote monitoring options</span>
+          </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact" id="contact">
+    <div class="container contact-layout">
+      <div class="contact-info">
+        <h2>Let's Discuss Your IT Needs</h2>
+        <p>
+          Share your requirements and our experts will design the right networking, security and support plan for you.
+        </p>
+
+        <div class="contact-details">
+          <div class="detail">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span>Phone</span>
+              <a href="tel:+911234567890">+91 12345 67890</a>
+            </div>
+          </div>
+          <div class="detail">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <a href="mailto:info@vaishnotech.com">info@vaishnotech.com</a>
+            </div>
+          </div>
+          <div class="detail">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span>Location</span>
+              <p>Vaishno Tech, City / Area, State, India</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-highlight">
+          <i class="fa-solid fa-clock"></i>
+          <span>Available 7 days a week for support and urgent onsite visits.</span>
+        </div>
+      </div>
+
+      <div class="contact-form-card">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-user"></i>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <i class="fa-solid fa-envelope"></i>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <div class="input-wrapper textarea-wrapper">
+              <i class="fa-solid fa-message"></i>
+              <textarea id="message" name="message" rows="4" placeholder="Share your requirements..." required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary full-width">Submit</button>
+          <p class="form-note">We typically respond within a few working hours.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-layout">
+      <div class="footer-col">
+        <h3 class="footer-logo">
+          Vaishno <span>Tech</span>
+        </h3>
+        <p>
+          Professional IT services, networking, security and repair solutions built around reliability and trust.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="lan-networking.html">LAN Networking</a></li>
+          <li><a href="cctv-installation.html">CCTV Surveillance</a></li>
+          <li><a href="data-recovery.html">Data Recovery</a></li>
+          <li><a href="amc-support.html">AMC Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Vaishno Tech. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/911234567890" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <a href="tel:+911234567890" class="float-btn call" aria-label="Call Now">
+      <i class="fa-solid fa-phone"></i>
+    </a>
+    <a href="https://maps.google.com/?q=Vaishno+Tech" target="_blank" class="float-btn location" aria-label="Location on Map">
+      <i class="fa-solid fa-location-dot"></i>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+
