@@ -29,37 +29,44 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===== SLIDER =====
+ document.addEventListener("DOMContentLoaded", () => {
+  // ===== SLIDER =====
   const slides = document.querySelectorAll(".slider .slide");
   const indicators = document.querySelectorAll(".slider .indicator");
 
-  if (slides.length === 0) return; // agar slider nahi mila to seedha return
+  if (!slides.length) return; // safety
 
   let current = 0;
-  let timer;
+  let timer = null;
 
-  const showSlide = (index) => {
-    slides.forEach((s, i) => s.classList.toggle("active", i === index));
-    indicators.forEach((d, i) => d.classList.toggle("active", i === index));
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
     current = index;
-  };
+  }
 
-  const start = () => {
+  function startSlider() {
     clearInterval(timer);
     timer = setInterval(() => {
       const next = (current + 1) % slides.length;
       showSlide(next);
-    }, 5000);
-  };
+    }, 4000);
+  }
 
-  indicators.forEach((dot, i) => {
+  indicators.forEach((dot, index) => {
     dot.addEventListener("click", () => {
-      showSlide(i);
-      start();
+      showSlide(index);
+      startSlider();
     });
   });
 
   showSlide(0);
-  start();
+  startSlider();
+});
 
   // ===== CONTACT FORM =====
   const contactForm = document.getElementById("contactForm");
@@ -71,3 +78,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
