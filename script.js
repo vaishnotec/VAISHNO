@@ -1,9 +1,16 @@
 // Vaishno Tech main script
 
 document.addEventListener("DOMContentLoaded", function () {
-  // ===== NAVBAR MOBILE MENU =====
+  // --- FIX 1: page khulte hi top par raho (mobile pe contact pe jump na ho) ---
+  if (window.location.hash === "#contact") {
+    // agar kisi link se #contact ke saath aaye ho to bhi hero se shuru karo
+    window.location.hash = "";
+    window.scrollTo(0, 0);
+  }
+
+  // --- FIX 2: MOBILE MENU toggle (sirf 1 navbar ke liye) ---
   var navToggle = document.getElementById("navToggle");
-  var navLinks = document.getElementById("navLinks");
+  var navLinks  = document.getElementById("navLinks");
 
   if (navToggle && navLinks) {
     navToggle.addEventListener("click", function () {
@@ -19,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // ====== yahan se aapka PURANA code jaisa ka taisa rehne do ======
+  // (slider, contact form, smooth scroll, etc.)
+});
   // ===== NAVBAR SCROLL =====
   var navbar = document.querySelector(".navbar");
   if (navbar) {
@@ -98,3 +108,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
