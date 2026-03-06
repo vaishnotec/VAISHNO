@@ -1,98 +1,101 @@
-// Vaishno Tech main script
+// Navbar scroll style
+const navbar = document.querySelector(".navbar");
+const navLinks = document.getElementById("navLinks");
+const navToggle = document.getElementById("navToggle");
+const yearEl = document.getElementById("year");
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Hamesha page top se start karo (mobile par contact pe jump na ho)
-  window.scrollTo(0, 0);
+// Set footer year
+if (yearEl) {
+  yearEl.textContent = new Date().getFullYear();
+}
 
-  // ===== NAVBAR SCROLL SHADOW =====
-  var navbar = document.querySelector(".navbar");
-  if (navbar) {
-    window.addEventListener("scroll", function () {
-      if (window.scrollY > 10) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
-    });
+// Scroll behavior for navbar
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 10) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
   }
+});
 
-  // ===== MOBILE MENU (3 lines) =====
-  var navToggle = document.getElementById("navToggle");
-  var navLinks = document.getElementById("navLinks");
+// Mobile nav toggle
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navToggle.classList.toggle("active");
+    navLinks.classList.toggle("open");
+  });
+}
 
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      navToggle.classList.toggle("active");
-      navLinks.classList.toggle("open");
-    });
-
-    // Menu link pe click hote hi band ho jaye
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        navToggle.classList.remove("active");
-      });
-    });
-  }
-
-  // ===== SLIDER =====
-  var slides = document.querySelectorAll(".slider .slide");
-  var indicators = document.querySelectorAll(".slider .indicator");
-
-  if (slides.length > 0) {
-    var current = 0;
-    var timer = null;
-
-    function showSlide(index) {
-      slides.forEach(function (slide, i) {
-        slide.classList.toggle("active", i === index);
-      });
-      indicators.forEach(function (dot, i) {
-        dot.classList.toggle("active", i === index);
-      });
-      current = index;
-    }
-
-    function startSlider() {
-      clearInterval(timer);
-      timer = setInterval(function () {
-        var next = (current + 1) % slides.length;
-        showSlide(next);
-      }, 4000);
-    }
-
-    indicators.forEach(function (dot, index) {
-      dot.addEventListener("click", function () {
-        showSlide(index);
-        startSlider();
-      });
-    });
-
-    showSlide(0);
-    startSlider();
-  }
-
-  // ===== CONTACT FORM =====
-  var contactForm = document.getElementById("contactForm");
-  if (contactForm) {
-    contactForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      alert("Thank you! Your message has been received. We will contact you shortly.");
-      contactForm.reset();
-    });
-  }
-
-  // ===== SMOOTH SCROLL FOR INTERNAL LINKS =====
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-    anchor.addEventListener("click", function (e) {
-      var targetId = this.getAttribute("href");
-      if (!targetId || targetId === "#") return;
-      var target = document.querySelector(targetId);
-      if (!target) return;
-      e.preventDefault();
-      var offset = 80; // navbar ke niche space
-      var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
-      window.scrollTo({ top: top, behavior: "smooth" });
-    });
+// Close mobile nav on link click
+document.querySelectorAll(".nav-links a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    navToggle.classList.remove("active");
   });
 });
+
+// Simple smooth scroll for internal links (fallback)
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener("click", function (e) {
+    const targetId = this.getAttribute("href");
+    if (targetId.length > 1) {
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    }
+  });
+});
+
+// Auto slider
+const slides = document.querySelectorAll(".slide");
+const indicators = document.querySelectorAll(".indicator");
+let currentSlide = 0;
+let sliderInterval;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+  indicators.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+  currentSlide = index;
+}
+
+function startSlider() {
+  if (!slides.length) return;
+  sliderInterval = setInterval(() => {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    showSlide(nextIndex);
+  }, 5000);
+}
+
+function resetSlider() {
+  if (!slides.length) return;
+  clearInterval(sliderInterval);
+  startSlider();
+}
+
+// Indicator click
+indicators.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    showSlide(index);
+    resetSlider();
+  });
+});
+
+startSlider();
+
+// Simple contact form handler
+const contactForm = document.getElementById("contactForm");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Thank you! Your message has been received. We will contact you shortly.");
+    contactForm.reset();
+  });
+}
