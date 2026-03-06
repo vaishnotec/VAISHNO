@@ -1,35 +1,10 @@
 // Vaishno Tech main script
 
 document.addEventListener("DOMContentLoaded", function () {
-  // --- FIX 1: page khulte hi top par raho (mobile pe contact pe jump na ho) ---
-  if (window.location.hash === "#contact") {
-    // agar kisi link se #contact ke saath aaye ho to bhi hero se shuru karo
-    window.location.hash = "";
-    window.scrollTo(0, 0);
-  }
+  // Hamesha page top se start karo (mobile par contact pe jump na ho)
+  window.scrollTo(0, 0);
 
-  // --- FIX 2: MOBILE MENU toggle (sirf 1 navbar ke liye) ---
-  var navToggle = document.getElementById("navToggle");
-  var navLinks  = document.getElementById("navLinks");
-
-  if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      navToggle.classList.toggle("active");
-      navLinks.classList.toggle("open");
-    });
-
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        navToggle.classList.remove("active");
-      });
-    });
-  }
-
-  // ====== yahan se aapka PURANA code jaisa ka taisa rehne do ======
-  // (slider, contact form, smooth scroll, etc.)
-});
-  // ===== NAVBAR SCROLL =====
+  // ===== NAVBAR SCROLL SHADOW =====
   var navbar = document.querySelector(".navbar");
   if (navbar) {
     window.addEventListener("scroll", function () {
@@ -41,10 +16,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== FOOTER YEAR =====
-  var yearEl = document.getElementById("year");
-  if (yearEl) {
-    yearEl.textContent = new Date().getFullYear();
+  // ===== MOBILE MENU (3 lines) =====
+  var navToggle = document.getElementById("navToggle");
+  var navLinks = document.getElementById("navLinks");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", function () {
+      navToggle.classList.toggle("active");
+      navLinks.classList.toggle("open");
+    });
+
+    // Menu link pe click hote hi band ho jaye
+    navLinks.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("open");
+        navToggle.classList.remove("active");
+      });
+    });
   }
 
   // ===== SLIDER =====
@@ -94,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // ===== SMOOTH SCROLL (id links) =====
+  // ===== SMOOTH SCROLL FOR INTERNAL LINKS =====
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener("click", function (e) {
       var targetId = this.getAttribute("href");
@@ -102,10 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
       var target = document.querySelector(targetId);
       if (!target) return;
       e.preventDefault();
-      var offset = 80;
+      var offset = 80; // navbar ke niche space
       var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
       window.scrollTo({ top: top, behavior: "smooth" });
     });
   });
 });
-
