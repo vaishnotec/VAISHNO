@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -24,32 +24,32 @@
 </head>
 <body>
   <!-- HEADER / NAVBAR -->
-  <<header id="top">
-  <nav class="navbar">
-    <div class="nav-left">
-      <a href="index.html#top" class="brand">
-        <!-- yahan apna logo path daal sakte ho -->
-        <img src="assets/your-logo.png" alt="Vaishno Tech Logo" class="logo" />
-        <span class="brand-name">Vaishno <span>Tech</span></span>
-      </a>
-    </div>
+  <header id="top">
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="#top" class="brand">
+          <!-- Replace src with your final logo path -->
+          <img src="assets/c__Users_pc_AppData_Roaming_Cursor_User_workspaceStorage_bf312caa37b2d6fe5dbc7a1deb7c815b_images_Picture1-9beab324-768d-4b4f-bc93-57b5ea91bd89.png" alt="Vaishno Tech Logo" class="logo" />
+          <span class="brand-name">Vaishno <span>Tech</span></span>
+        </a>
+      </div>
 
-    <div class="nav-right">
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html#hero">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
+      <div class="nav-right">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-</header>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
   <!-- HERO SECTION -->
   <section class="hero" id="hero">
@@ -114,56 +114,55 @@
   </section>
 
   <!-- IMAGE SLIDER SECTION -->
- <!-- IMAGE SLIDER SECTION -->
-<section class="slider-section">
-  <div class="container">
-    <div class="section-header">
-      <h2>Core IT Capabilities</h2>
-      <p>Future‑ready infrastructure, security and support for your business.</p>
-    </div>
-  </div>
-
-  <div class="slider">
-    <div class="slide active">
-      <div class="slide-bg slide-bg-1"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content container">
-        <h3>Networking Infrastructure</h3>
-        <p>
-          High‑performance LAN, WAN and wireless networks with professional design, installation and optimization.
-        </p>
+  <section class="slider-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Core IT Capabilities</h2>
+        <p>Future‑ready infrastructure, security and support for your business.</p>
       </div>
     </div>
 
-    <div class="slide">
-      <div class="slide-bg slide-bg-2"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content container">
-        <h3>Cyber Security</h3>
-        <p>
-          Advanced firewalls, endpoint protection and 24/7 monitoring to keep your data and systems safe.
-        </p>
+    <div class="slider" id="serviceSlider">
+      <div class="slide active" data-title="Networking Infrastructure">
+        <div class="slide-bg slide-bg-1"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h3>Networking Infrastructure</h3>
+          <p>
+            High‑performance LAN, WAN and wireless networks with professional design, installation and optimization.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide" data-title="Cyber Security">
+        <div class="slide-bg slide-bg-2"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h3>Cyber Security</h3>
+          <p>
+            Advanced firewalls, endpoint protection and 24/7 monitoring to keep your data and systems safe.
+          </p>
+        </div>
+      </div>
+
+      <div class="slide" data-title="IT Technical Support">
+        <div class="slide-bg slide-bg-3"></div>
+        <div class="slide-overlay"></div>
+        <div class="slide-content container">
+          <h3>IT Technical Support</h3>
+          <p>
+            Friendly, experienced technicians ready to resolve your IT issues quickly on‑site or remotely.
+          </p>
+        </div>
+      </div>
+
+      <div class="slider-indicators" id="sliderIndicators">
+        <button class="indicator active" data-slide="0"></button>
+        <button class="indicator" data-slide="1"></button>
+        <button class="indicator" data-slide="2"></button>
       </div>
     </div>
-
-    <div class="slide">
-      <div class="slide-bg slide-bg-3"></div>
-      <div class="slide-overlay"></div>
-      <div class="slide-content container">
-        <h3>IT Technical Support</h3>
-        <p>
-          Friendly, experienced technicians ready to resolve your IT issues quickly on‑site or remotely.
-        </p>
-      </div>
-    </div>
-
-    <div class="slider-indicators">
-      <button class="indicator active"></button>
-      <button class="indicator"></button>
-      <button class="indicator"></button>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- SERVICES SECTION -->
   <section class="services" id="services">
@@ -335,34 +334,25 @@
     </div>
   </section>
 
-  
-<!-- GOOGLE REVIEW SECTION -->
-<section class="reviews">
-  <div class="container">
-    <div class="reviews-inner">
-      <div class="stars" aria-label="5 star rating">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+  <!-- GOOGLE REVIEW SECTION -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews-inner">
+        <div class="stars" aria-label="5 star rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="review-text">
+          "Trusted IT service provider with professional networking and repair solutions."
+        </p>
+        <a href="#" class="btn btn-light">View Google Reviews</a>
       </div>
-      <p class="review-text">
-        "Trusted IT service provider with professional networking and repair solutions."
-      </p>
-
-      <!-- Google Reviews button with your link -->
-      <a
-        href="https://www.google.com/search?sca_esv=73000156de4ea350&cs=0&sxsrf=ANbL-n5LHarKLWMM-texeHnbMKM3kW5l0w:1772567123320&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOesCEQyzh_Afu6Ymp29qRUHFSQn-aoBFCIJvNmOxDl99CA0fWHJU06-jeK6DewB79onCU1OVntQfXWWheoeHzdYQT9lS&q=Vaishno+Tech+Reviews&sa=X&ved=2ahUKEwj3nOeNv4STAxWHfPUHHTKHPAMQ0bkNegQIIBAF&biw=1366&bih=599&dpr=1"
-        target="_blank"
-        rel="noopener"
-        class="btn btn-light"
-      >
-        View Google Reviews
-      </a>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- ABOUT SECTION -->
   <section class="about" id="about">
     <div class="container about-layout">
@@ -540,59 +530,7 @@
     </a>
   </div>
 
-  <  <!-- FLOATING BUTTONS yaha tak rahenge ... -->
-
-  <!-- SLIDER INLINE SCRIPT -->
-  <script>
-    // Slider code – runs after HTML is loaded
-    const slides = document.querySelectorAll(".slider .slide");
-    const indicators = document.querySelectorAll(".slider .indicator");
-
-    console.log("Slides found:", slides.length, "Indicators:", indicators.length);
-
-    if (slides.length > 0) {
-      let current = 0;
-      let timer = null;
-
-      function showSlide(index) {
-        slides.forEach((slide, i) => {
-          slide.classList.toggle("active", i === index);
-        });
-        indicators.forEach((dot, i) => {
-          dot.classList.toggle("active", i === index);
-        });
-        current = index;
-      }
-
-      function startSlider() {
-        clearInterval(timer);
-        timer = setInterval(() => {
-          const next = (current + 1) % slides.length;
-          showSlide(next);
-        }, 4000);
-      }
-
-      indicators.forEach((dot, index) => {
-        dot.addEventListener("click", () => {
-          showSlide(index);
-          startSlider();
-        });
-      });
-
-      // start
-      showSlide(0);
-      startSlider();
-    }
-  </script>
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
