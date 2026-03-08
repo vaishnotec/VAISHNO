@@ -60,9 +60,12 @@ img {
   display: block;
 }
 
-.container {
-  width: min(1200px, 100% - 3rem);
-  margin-inline: auto;
+.container{
+max-width:1200px;
+width:100%;
+margin:auto;
+padding:0 20px;
+}
 }
 
 .section-header {
@@ -1089,5 +1092,6 @@ header {
     margin-top: 0.7rem;
   }
 }
+
 
 
