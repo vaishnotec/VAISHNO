@@ -334,24 +334,33 @@
     </div>
   </section>
 
-  <!-- GOOGLE REVIEW SECTION -->
-  <section class="reviews">
-    <div class="container">
-      <div class="reviews-inner">
-        <div class="stars" aria-label="5 star rating">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-        <p class="review-text">
-          "Trusted IT service provider with professional networking and repair solutions."
-        </p>
-        <a href="#" class="btn btn-light">View Google Reviews</a>
+ <!-- GOOGLE REVIEW SECTION -->
+<section class="reviews">
+  <div class="container">
+    <div class="reviews-inner">
+      <div class="stars" aria-label="5 star rating">
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-star"></i>
       </div>
+      <p class="review-text">
+        "Trusted IT service provider with professional networking and repair solutions."
+      </p>
+
+      <!-- Google Reviews button with your link -->
+      <a
+        href="https://www.google.com/search?sca_esv=73000156de4ea350&cs=0&sxsrf=ANbL-n5LHarKLWMM-texeHnbMKM3kW5l0w:1772567123320&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOesCEQyzh_Afu6Ymp29qRUHFSQn-aoBFCIJvNmOxDl99CA0fWHJU06-jeK6DewB79onCU1OVntQfXWWheoeHzdYQT9lS&q=Vaishno+Tech+Reviews&sa=X&ved=2ahUKEwj3nOeNv4STAxWHfPUHHTKHPAMQ0bkNegQIIBAF&biw=1366&bih=599&dpr=1"
+        target="_blank"
+        rel="noopener"
+        class="btn btn-light"
+      >
+        View Google Reviews
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- ABOUT SECTION -->
   <section class="about" id="about">
@@ -411,14 +420,14 @@
             <i class="fa-solid fa-phone"></i>
             <div>
               <span>Phone</span>
-              <a href="tel:+911234567890">+91 12345 67890</a>
+              <a href="tel:+918240215306">+91 82402 15306</a>
             </div>
           </div>
           <div class="detail">
             <i class="fa-solid fa-envelope"></i>
             <div>
               <span>Email</span>
-              <a href="mailto:info@vaishnotech.com">info@vaishnotech.com</a>
+              <a href="mailto:vaishnotec@gmail.com">info@vaishnotech.com</a>
             </div>
           </div>
           <div class="detail">
@@ -519,10 +528,10 @@
 
   <!-- FLOATING BUTTONS -->
   <div class="floating-buttons">
-    <a href="https://wa.me/911234567890" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp Chat">
+    <a href="https://wa.me/919681281691" target="_blank" class="float-btn whatsapp" aria-label="WhatsApp Chat">
       <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <a href="tel:+911234567890" class="float-btn call" aria-label="Call Now">
+    <a href="tel:+918240215306" class="float-btn call" aria-label="Call Now">
       <i class="fa-solid fa-phone"></i>
     </a>
     <a href="https://maps.google.com/?q=Vaishno+Tech" target="_blank" class="float-btn location" aria-label="Location on Map">
@@ -530,8 +539,49 @@
     </a>
   </div>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
+    <!-- FLOATING BUTTONS yaha tak rahenge ... -->
+
+  <!-- SLIDER INLINE SCRIPT -->
+  <script>
+    // Slider code – runs after HTML is loaded
+    const slides = document.querySelectorAll(".slider .slide");
+    const indicators = document.querySelectorAll(".slider .indicator");
+
+    console.log("Slides found:", slides.length, "Indicators:", indicators.length);
+
+    if (slides.length > 0) {
+      let current = 0;
+      let timer = null;
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle("active", i === index);
+        });
+        indicators.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+        current = index;
+      }
+
+      function startSlider() {
+        clearInterval(timer);
+        timer = setInterval(() => {
+          const next = (current + 1) % slides.length;
+          showSlide(next);
+        }, 4000);
+      }
+
+      indicators.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          showSlide(index);
+          startSlider();
+        });
+      });
+
+      // start
+      showSlide(0);
+      startSlider();
+    }
+  </script>
 </body>
 </html>
-
