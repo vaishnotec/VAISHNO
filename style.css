@@ -61,7 +61,7 @@ img {
 }
 
 .container {
-  width: min(1180px, 100% - 3rem);
+  width: min(1200px, 100% - 3rem);
   margin-inline: auto;
 }
 
@@ -1089,4 +1089,5 @@ header {
     margin-top: 0.7rem;
   }
 }
+
 
