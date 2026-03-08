@@ -51,43 +51,44 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Auto slider
-const slides = document.querySelectorAll(".slide");
-const indicators = document.querySelectorAll(".indicator");
-let currentSlide = 0;
-let sliderInterval;
+document.addEventListener("DOMContentLoaded", () => {
+  // ===== SLIDER =====
+  const slides = document.querySelectorAll(".slider .slide");
+  const indicators = document.querySelectorAll(".slider .indicator");
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.classList.toggle("active", i === index);
+  if (!slides.length) return; // safety
+
+  let current = 0;
+  let timer = null;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === index);
+    });
+    indicators.forEach((dot, i) => {
+      dot.classList.toggle("active", i === index);
+    });
+    current = index;
+  }
+
+  function startSlider() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+      const next = (current + 1) % slides.length;
+      showSlide(next);
+    }, 4000);
+  }
+
+  indicators.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showSlide(index);
+      startSlider();
+    });
   });
-  indicators.forEach((dot, i) => {
-    dot.classList.toggle("active", i === index);
-  });
-  currentSlide = index;
-}
 
-function startSlider() {
-  if (!slides.length) return;
-  sliderInterval = setInterval(() => {
-    const nextIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextIndex);
-  }, 5000);
-}
-
-function resetSlider() {
-  if (!slides.length) return;
-  clearInterval(sliderInterval);
+  showSlide(0);
   startSlider();
-}
-
-// Indicator click
-indicators.forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    showSlide(index);
-    resetSlider();
-  });
 });
-
 startSlider();
 
 // Simple contact form handler
@@ -99,3 +100,4 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
