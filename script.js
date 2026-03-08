@@ -49,7 +49,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
-//====== slider section =====
 document.addEventListener("DOMContentLoaded", () => {
   // ===== SLIDER =====
   const slides = document.querySelectorAll(".slider .slide");
@@ -88,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
   showSlide(0);
   startSlider();
 });
-startSlider();
 
 // Simple contact form handler
 const contactForm = document.getElementById("contactForm");
@@ -99,4 +97,5 @@ if (contactForm) {
     contactForm.reset();
   });
 }
+
 
