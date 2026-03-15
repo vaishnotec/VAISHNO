@@ -101,38 +101,28 @@ if (contactForm) {
   
 }
 fetch("offers.json")
-.then(response => response.json())
+.then(res => res.json())
 .then(data => {
 
 let container = document.getElementById("offersContainer");
 
-data.offers.forEach((offer,index)=>{
+data.offers.forEach(offer => {
 
-let div=document.createElement("div");
+let div = document.createElement("div");
 
-div.innerHTML=`
+div.classList.add("offer-card");
+
+div.innerHTML = `
 <h3>${offer.title}</h3>
 <p>${offer.description}</p>
-<small>Valid till: ${offer.valid}</small>
+<span class="valid">Valid till: ${offer.valid}</span>
+<a href="https://wa.me/919681281691" target="_blank" class="offer-btn">
+Get Offer
+</a>
 `;
 
 container.appendChild(div);
 
-if(index===0){
-
-document.getElementById("popupTitle").innerText=offer.title;
-document.getElementById("popupText").innerText=offer.description;
-
-}
-
 });
 
 });
-
-document.getElementById("closePopup").onclick=function(){
-
-document.getElementById("offerPopup").style.display="none";
-
-};
-
-
