@@ -1092,35 +1092,59 @@ header {
 
 
 
-.offer-popup{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#fff;
-box-shadow:0 0 10px rgba(0,0,0,0.2);
-padding:20px;
-border-radius:10px;
-z-index:9999;
+.offers{
+padding:60px 20px;
+text-align:center;
 }
 
-.popup-content{
-max-width:300px;
+.offers-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
 }
 
-.popup-btn{
+.offer-card{
+background:#111827;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+transition:0.3s;
+}
+
+.offer-card:hover{
+transform:translateY(-8px);
+}
+
+.offer-card h3{
+color:#38bdf8;
+margin-bottom:10px;
+}
+
+.offer-card p{
+color:#ccc;
+margin-bottom:15px;
+}
+
+.valid{
+display:block;
+font-size:14px;
+color:#aaa;
+margin-bottom:15px;
+}
+
+.offer-btn{
 display:inline-block;
-margin-top:10px;
-background:#25D366;
+background:#22c55e;
+padding:10px 18px;
+border-radius:6px;
 color:white;
-padding:10px 15px;
 text-decoration:none;
-border-radius:5px;
+font-weight:500;
 }
 
-#closePopup{
-float:right;
-cursor:pointer;
-font-size:20px;
+.offer-btn:hover{
+background:#16a34a;
 }
 
 
