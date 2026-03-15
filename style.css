@@ -1148,5 +1148,14 @@ background:#16a34a;
 }
 
 
+.countdown{
 
+background:#1f2937;
+color:#facc15;
+padding:8px 12px;
+border-radius:6px;
+margin-bottom:10px;
+font-weight:600;
+font-size:14px;
+}
 
