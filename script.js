@@ -100,7 +100,7 @@ if (contactForm) {
 
   
 }
-fetch("data/offers.json")
+fetch("offers.json")
 .then(res => res.json())
 .then(data => {
 
