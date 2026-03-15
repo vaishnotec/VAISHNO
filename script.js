@@ -106,7 +106,13 @@ fetch("offers.json")
 
 let container = document.getElementById("offersContainer");
 
+let today = new Date();
+
 data.offers.forEach(offer => {
+
+let validDate = new Date(offer.valid);
+
+if(validDate >= today){
 
 let div = document.createElement("div");
 
@@ -116,12 +122,15 @@ div.innerHTML = `
 <h3>${offer.title}</h3>
 <p>${offer.description}</p>
 <span class="valid">Valid till: ${offer.valid}</span>
+
 <a href="https://wa.me/919681281691" target="_blank" class="offer-btn">
 Get Offer
 </a>
 `;
 
 container.appendChild(div);
+
+}
 
 });
 
