@@ -1092,5 +1092,37 @@ header {
 
 
 
+.offer-popup{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#fff;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+padding:20px;
+border-radius:10px;
+z-index:9999;
+}
+
+.popup-content{
+max-width:300px;
+}
+
+.popup-btn{
+display:inline-block;
+margin-top:10px;
+background:#25D366;
+color:white;
+padding:10px 15px;
+text-decoration:none;
+border-radius:5px;
+}
+
+#closePopup{
+float:right;
+cursor:pointer;
+font-size:20px;
+}
+
+
 
 
