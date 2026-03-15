@@ -96,6 +96,43 @@ if (contactForm) {
     alert("Thank you! Your message has been received. We will contact you shortly.");
     contactForm.reset();
   });
+
+
+  
 }
+fetch("offers.json")
+.then(response => response.json())
+.then(data => {
+
+let container = document.getElementById("offersContainer");
+
+data.offers.forEach((offer,index)=>{
+
+let div=document.createElement("div");
+
+div.innerHTML=`
+<h3>${offer.title}</h3>
+<p>${offer.description}</p>
+<small>Valid till: ${offer.valid}</small>
+`;
+
+container.appendChild(div);
+
+if(index===0){
+
+document.getElementById("popupTitle").innerText=offer.title;
+document.getElementById("popupText").innerText=offer.description;
+
+}
+
+});
+
+});
+
+document.getElementById("closePopup").onclick=function(){
+
+document.getElementById("offerPopup").style.display="none";
+
+};
 
 
