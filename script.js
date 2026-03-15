@@ -106,11 +106,10 @@ fetch("offers.json")
 
 let container = document.getElementById("offersContainer");
 
-let today = new Date();
-
-data.offers.forEach(offer => {
+data.offers.forEach((offer,index) => {
 
 let validDate = new Date(offer.valid);
+let today = new Date();
 
 if(validDate >= today){
 
@@ -121,6 +120,9 @@ div.classList.add("offer-card");
 div.innerHTML = `
 <h3>${offer.title}</h3>
 <p>${offer.description}</p>
+
+<div class="countdown" id="countdown-${index}"></div>
+
 <span class="valid">Valid till: ${offer.valid}</span>
 
 <a href="https://wa.me/919681281691" target="_blank" class="offer-btn">
@@ -130,8 +132,39 @@ Get Offer
 
 container.appendChild(div);
 
+startCountdown(validDate,`countdown-${index}`);
+
 }
 
 });
 
 });
+
+
+function startCountdown(endDate,elementId){
+
+let timer=setInterval(function(){
+
+let now=new Date().getTime();
+let distance=endDate-now;
+
+if(distance<0){
+
+clearInterval(timer);
+document.getElementById(elementId).innerHTML="Offer Expired";
+
+return;
+
+}
+
+let days=Math.floor(distance/(1000*60*60*24));
+let hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+let minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+let seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById(elementId).innerHTML =
+`⏳ ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+},1000);
+
+}
